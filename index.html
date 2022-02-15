@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pushbuttons | 👨‍💻</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      crossorigin="anonymous"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Major+Mono+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>")
+            16 0,
+          auto;
+      }
+      body {
+        margin: 0;
+        background-color: #111111;
+        color: white;
+        font-family: "Major Mono Display", monospace;
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s;
+      }
+      h1 {
+        all: unset;
+        display: block;
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: "Major Mono Display", monospace;
+        color: white;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        color: rgb(255, 0, 191);
+        cursor: pointer;
+      }
+      .flex-container {
+        height: 100vh;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/undraw_launch_day.svg");
+        background-repeat: no-repeat, repeat;
+        background-position: center;
+        background-size: auto;
+      }
+
+      .title {
+        padding: 0.5rem;
+        background: black;
+        cursor: default;
+      }
+      .contact {
+        margin-top: 2rem;
+        padding: 0.5rem;
+        display: block;
+        background: navajowhite;
+        color: black;
+        cursor: default;
+      }
+      .company-info {
+        margin-top: 2rem;
+        padding: 0.5rem;
+        background-color: crimson;
+      }
+      .hero-text {
+        position: absolute;
+        padding-bottom: 0.5rem;
+        padding-right: 1rem;
+        bottom: 0;
+        right: 0;
+        font-size: 1rem;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+    <div class="flex-container">
+      <div class="title">
+        <h1>pushbuttons // launching soon</h1>
+      </div>
+      <div class="contact">
+        contact //
+        <a href="mailto:hello@pushbuttons.io">hello@pushbuttons.io</a>
+      </div>
+      <div class="company-info">
+        <div>ACN | 656 963 745</div>
+        <div>ABN | 946 569 637 45</div>
+      </div>
+    </div>
+    <div class="hero-text">React.js dev ❤️ 💻</div>
+  </body>
+</html>
