@@ -61,8 +61,8 @@
       .title {
         padding: 0.5rem;
         background: black;
-        cursor: default;
       }
+
       .contact {
         margin-top: 2rem;
         padding: 0.5rem;
@@ -71,10 +71,13 @@
         color: black;
         cursor: default;
       }
+
       .company-info {
         margin-top: 2rem;
+        padding: 0.5rem;
         background-color: crimson;
       }
+
       .hero-text {
         margin-top: 2rem;
         padding-bottom: 0.5rem;
@@ -82,10 +85,10 @@
         bottom: 0;
         right: 0;
         font-size: 1rem;
-        cursor: default;
         color: black;
         background-color: yellow;
       }
+
       .recruiters-text {
         position: absolute;
         bottom: 0;
@@ -98,6 +101,48 @@
         white-space: nowrap;
       }
 
+      .scale-on-hover {
+        transition: all 0.25s ease-in-out;
+      }
+      .scale-on-hover:hover {
+        transform: scale(1.05);
+      }
+
+      .spine {
+        color: yellow;
+        display: inline-block;
+        transform-origin: center;
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+      }
+
+      .spin-animation::before {
+        content: "*";
+        font-size: 60px;
+        display: inline-block;
+        font-family: "Courier New", Courier, monospace;
+        color: hotpink;
+        line-height: 1px;
+        transform: translateY(12px);
+      }
+
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
       @-moz-keyframes scroll {
         0% {
           -moz-transform: translateX(100%);
@@ -107,40 +152,46 @@
         }
       }
       @-webkit-keyframes scroll {
-        0% {
-          -webkit-transform: translateX(100%);
-        }
-        100% {
+        to {
           -webkit-transform: translateX(-100%);
+        }
+        from {
+          -webkit-transform: translateX(100%);
         }
       }
       @keyframes scroll {
-        0% {
-          -moz-transform: translateX(100%); /* Firefox bug fix */
-          -webkit-transform: translateX(100%); /* Firefox bug fix */
-          transform: translateX(100%);
-        }
-        100% {
-          -moz-transform: translateX(-100%); /* Firefox bug fix */
-          -webkit-transform: translateX(-100%); /* Firefox bug fix */
+        to {
+          -moz-transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+        }
+        from {
+          -moz-transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          transform: translateX(100%);
         }
       }
     </style>
   </head>
   <body onload="document.body.style.opacity='1'">
     <div class="flex-container">
-      <div class="title">
-        <h1>pushbuttons // launching soon</h1>
+      <div class="title scale-on-hover">
+        <h1>
+          pushbutt<span class="spine">
+            <span class="spin-animation"></span></span
+          >ns // launching soon
+        </h1>
       </div>
-      <div class="hero-text">react.js dev ❤️ 💻</div>
-      <div class="contact">
+      <div class="hero-text scale-on-hover">
+        TypeScript | reAct.js dev ❤️ 💻
+      </div>
+      <div class="contact scale-on-hover">
         contact //
         <a href="mailto:hello@pushbuttons.io">hello@pushbuttons.io</a>
       </div>
 
       v>
-      <div class="company-info">
+      <div class="company-info scale-on-hover">
         <div>ACN | 656 963 745</div>
         <div>ABN | 946 569 637 45</div>
       </div>
