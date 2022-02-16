@@ -89,18 +89,6 @@
         background-color: yellow;
       }
 
-      .recruiters-text {
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-        -moz-animation: scroll 20s linear;
-        -webkit-animation: scroll 20s linear;
-        animation: scroll 20s linear;
-        white-space: nowrap;
-      }
-
       .scale-on-hover {
         transition: all 0.25s ease-in-out;
       }
@@ -108,7 +96,7 @@
         transform: scale(1.05);
       }
 
-      .spine {
+      .spin-wrapper {
         color: yellow;
         display: inline-block;
         transform-origin: center;
@@ -127,48 +115,31 @@
         transform: translateY(12px);
       }
 
-      @-moz-keyframes spin {
-        100% {
-          -moz-transform: rotate(360deg);
-        }
+      .marquee {
+        width: 100vw;
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 10px;
       }
-      @-webkit-keyframes spin {
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
+
+      .marquee-text {
+        display: inline-block;
+        animation: marquee 20s linear infinite;
       }
-      @keyframes spin {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @-moz-keyframes scroll {
+
+      @keyframes marquee {
         0% {
-          -moz-transform: translateX(100%);
+          transform: translateX(100%);
         }
         100% {
-          -moz-transform: translateX(-100%);
-        }
-      }
-      @-webkit-keyframes scroll {
-        to {
-          -webkit-transform: translateX(-100%);
-        }
-        from {
-          -webkit-transform: translateX(100%);
-        }
-      }
-      @keyframes scroll {
-        to {
-          -moz-transform: translateX(-100%);
-          -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
         }
-        from {
-          -moz-transform: translateX(100%);
-          -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
         }
       }
     </style>
@@ -177,7 +148,7 @@
     <div class="flex-container">
       <div class="title scale-on-hover">
         <h1>
-          pushbutt<span class="spine">
+          pushbutt<span class="spin-wrapper">
             <span class="spin-animation"></span></span
           >ns // launching soon
         </h1>
@@ -196,9 +167,11 @@
         <div>ABN | 946 569 637 45</div>
       </div>
     </div>
-    <div class="recruiters-text">
-      🙏 @recruiters! please note i'm currently engaged on a mission & not
-      currently seeking opportunites at the moment 🙏
+    <div class="marquee">
+      <div class="marquee-text">
+        🙏 @recruiters! please note i'm currently engaged on a mission & not
+        currently seeking opportunites at the moment 🙏
+      </div>
     </div>
   </body>
 </html>
